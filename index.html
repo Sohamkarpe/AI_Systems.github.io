@@ -1372,7 +1372,8 @@
             <div class="hero-content">
                 <div class="hero-badge">Available for Opportunities</div>
                 <h2 style="font-family: 'JetBrains Mono', monospace; font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 0.5rem; animation: fadeInUp 0.8s ease;">Hi, I'm <span style="color: var(--accent-cyan);">Soham Karpe, M. Eng.</span></h2>
-                <h1>AI Systems Engineer <span class="gradient-text">(Machine Vision, Machine Learning, Data Processing, Hardware Integration, HMI/GUI Developer)</span></h1>
+                <!-- ✅ UPDATED: Added "Image Processing" to the specialization list -->
+                <h1>AI Systems Engineer <span class="gradient-text">(Machine Vision, Machine Learning, Image Processing, Data Processing, Hardware Integration, HMI/GUI Developer)</span></h1>
                 <p class="hero-description">
                     Specializing in industrial machine vision, real-time image processing, and automated inspection systems. Developing C++ and Python-based pipelines, integrating industrial cameras and lighting systems for high-performance production environments.
                 </p>
@@ -1454,6 +1455,30 @@
                     <span class="skill-item">AWS</span>
                     <span class="skill-item">Edge AI</span>
                 </div>
+
+                <h4 style="margin-top: 1.75rem;">Image Processing Algorithms</h4>
+                <div class="skills-list">
+                    <span class="skill-item">Gaussian Filtering</span>
+                    <span class="skill-item">Median Filtering</span>
+                    <span class="skill-item">Otsu Thresholding</span>
+                    <span class="skill-item">Adaptive Thresholding</span>
+                    <span class="skill-item">Canny Edge Detection</span>
+                    <span class="skill-item">Sobel Edge Detection</span>
+                    <span class="skill-item">Blob Analysis</span>
+                    <span class="skill-item">Morphological Erosion</span>
+                    <span class="skill-item">Morphological Dilation</span>
+                    <span class="skill-item">Opening & Closing</span>
+                    <span class="skill-item">Template Matching</span>
+                    <span class="skill-item">Hough Transform</span>
+                    <span class="skill-item">Histogram Analysis</span>
+                    <span class="skill-item">Histogram Equalization</span>
+                    <span class="skill-item">Distortion Correction</span>
+                    <span class="skill-item">Camera Calibration</span>
+                    <span class="skill-item">Contour Detection</span>
+                    <span class="skill-item">Feature Extraction</span>
+                    <span class="skill-item">Image Segmentation</span>
+                    <span class="skill-item">Noise Reduction</span>
+                </div>
             </div>
         </div>
     </section>
@@ -1465,16 +1490,23 @@
             <p>Professional journey in machine vision and AI systems engineering</p>
         </div>
         <div class="timeline">
+
+            <!-- ✅ UPDATED: AI Systems Engineer bullets now match CV exactly -->
             <div class="timeline-item fade-in">
                 <div class="timeline-date">Jul 2024 – Present</div>
                 <div class="timeline-content">
-                    <h3>Machine Vision Engineer / AI Systems Engineer (Intern)</h3>
+                    <h3>AI Systems Engineer</h3>
                     <div class="company">mech-tron GmbH & Co. KG</div>
                     <div class="location">📍 Roding, Germany</div>
                     <ul>
-                        <li>Developed and optimized C++/Python machine vision pipelines using OpenCV for automated defect detection, integrating industrial cameras (Basler, Daheng), lighting systems, and hardware interfaces for real-time inspection workflows in production environments</li>
-                        <li>Designed and implemented Qt-based HMI applications for system control, configuration, and visualization, while integrating AI-based inspection systems with automation devices using structured communication protocols</li>
-                        <li>Collaborated with cross-functional teams (software, hardware, automation) to deliver complete machine vision solutions, performing system testing, debugging, deployment validation, and performance optimization for industrial production lines</li>
+                        <li>Implementation of standard image processing algorithms for feature extraction and defect detection: filtering, thresholding (Otsu), edge detection (Canny, Sobel), blob analysis, morphological operations (erosion, dilation), template matching, Hough transform, and histogram analysis</li>
+                        <li>Development of software solutions using C, C++, Python, and OpenCV</li>
+                        <li>Integration of industrial cameras and sensor systems, distortion correction, and camera calibration including geometric calibration and pixel-to-mm conversion</li>
+                        <li>Optimization of image quality for reliable inspection results</li>
+                        <li>Development and integration of AI-based inspection systems using YOLO and deep learning models combined with classical image processing</li>
+                        <li>Creation and preparation of customised datasets for AI models (annotation, training)</li>
+                        <li>Development of HMI interfaces with Qt for production systems</li>
+                        <li>Deployment of inspection solutions on embedded and edge systems (Raspberry Pi, IoT)</li>
                     </ul>
                 </div>
             </div>
@@ -1633,6 +1665,7 @@
             <p>Industrial vision and machine learning applications</p>
         </div>
         <div class="projects-grid">
+
             <div class="project-card fade-in">
                 <div class="project-image" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
                     <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5">
@@ -1677,12 +1710,63 @@
                 </div>
             </div>
 
+            <!-- ✅ NEW PROJECT: Automated Testing & Multi-Camera Integration Framework -->
+            <div class="project-card fade-in">
+                <div class="project-image" style="background: linear-gradient(135deg, #0f1a2e 0%, #1a2e1a 100%);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="1.5">
+                        <path d="M9 12l2 2 4-4"/>
+                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        <path d="M3 7h4M3 12h2M3 17h4" stroke-dasharray="2 2"/>
+                        <rect x="14" y="3" width="7" height="5" rx="1"/>
+                        <path d="M17 8v3M15 10h4"/>
+                    </svg>
+                </div>
+                <div class="project-content">
+                    <h3>Automated Testing & Multi-Camera Integration Framework</h3>
+                    <p>Developed a pytest-based automated testing framework for validating YOLOv8 models with CI/CD pipeline integration for continuous benchmarking. Integrated multiple industrial cameras for synchronized capture, implementing calibration, sensor fusion, and spatial alignment for 3D scene understanding.</p>
+                    <div class="project-tech">
+                        <span>pytest</span>
+                        <span>YOLOv8</span>
+                        <span>CI/CD</span>
+                        <span>Multi-Camera</span>
+                        <span>Sensor Fusion</span>
+                    </div>
+                    <a href="#" class="project-link">Oct 2024 – May 2025 →</a>
+                </div>
+            </div>
+
+            <!-- ✅ NEW PROJECT: Industrial Inspection HMI with Annotation -->
+            <div class="project-card fade-in">
+                <div class="project-image" style="background: linear-gradient(135deg, #1a1020 0%, #2e1a0f 100%);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="1.5">
+                        <rect x="2" y="3" width="20" height="14" rx="2"/>
+                        <path d="M8 21h8M12 17v4"/>
+                        <rect x="6" y="7" width="5" height="5" rx="1" stroke="var(--accent-cyan)"/>
+                        <path d="M14 8h3M14 11h3" stroke="var(--accent-cyan)" stroke-linecap="round"/>
+                        <circle cx="8.5" cy="9.5" r="1" fill="var(--accent-purple)"/>
+                    </svg>
+                </div>
+                <div class="project-content">
+                    <h3>Industrial Inspection HMI with Built-in Image Labelling and Annotation</h3>
+                    <p>Designed and developed a Qt-based HMI for real-time machine vision inspection with live camera feed, defect visualization, and configurable parameters. Built an integrated annotation module enabling operators to capture, tag, and export defect images directly on the production line — eliminating external tools and accelerating AI model retraining.</p>
+                    <div class="project-tech">
+                        <span>Qt/PyQt</span>
+                        <span>C++</span>
+                        <span>OpenCV</span>
+                        <span>HMI</span>
+                        <span>Dataset Annotation</span>
+                    </div>
+                    <a href="#" class="project-link">Jun 2025 – Aug 2025 →</a>
+                </div>
+            </div>
+
             <div class="project-card fade-in">
                 <div class="project-image" style="background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);">
                     <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="1.5">
-                        <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/>
-                        <path d="M9 9h.01M15 9h.01M9 13h.01M15 13h.01"/>
-                        <path d="M12 3v4" stroke-dasharray="2 2"/>
+                        <path d="M3 3v18h18"/>
+                        <path d="M7 14l4-4 4 4 5-5"/>
+                        <circle cx="20" cy="9" r="2" fill="var(--accent-purple)"/>
+                        <path d="M7 14v3M11 10v7M15 14v3"/>
                     </svg>
                 </div>
                 <div class="project-content">
@@ -1764,6 +1848,7 @@
                     <a href="#" class="project-link">mech-tron GmbH →</a>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -1813,7 +1898,7 @@
             <h3>Ready to build robust vision systems?</h3>
             <p>I'm Soham Karpe, currently looking for full-time positions in Machine Vision Engineering, AI Systems Engineering, Computer Vision, and Industrial Automation. Willing to relocate. Let's discuss how we can work together.</p>
             <div class="contact-links">
-                <a href="/cdn-cgi/l/email-protection#016a60737164726e69606c41666c60686d2f626e6c" class="contact-link">
+                <a href="mailto:karpesoham@gmail.com" class="contact-link">
                     <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                     Email
                 </a>
@@ -1825,6 +1910,10 @@
                     <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                     GitHub
                 </a>
+                <a href="https://linkedin.com/in/soham-karpe" target="_blank" class="contact-link">
+                    <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    LinkedIn
+                </a>
             </div>
         </div>
     </section>
@@ -1832,6 +1921,7 @@
     <!-- Footer -->
     <footer>
         <p>© 2026 Soham Karpe, M. Eng. · Machine Vision Engineer / AI Systems Engineer · Crafted with passion for industrial vision systems</p>
+        <p style="margin-top: 0.5rem;"><a href="https://linkedin.com/in/soham-karpe" target="_blank" style="color: var(--accent-cyan); text-decoration: none; font-size: 0.9rem;">linkedin.com/in/soham-karpe</a></p>
         <p class="quote">"Transforming industrial inspection through intelligent machine vision."</p>
     </footer>
 
@@ -1840,7 +1930,7 @@
         <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
     </button>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Loading Screen
         window.addEventListener('load', () => {
             setTimeout(() => {
