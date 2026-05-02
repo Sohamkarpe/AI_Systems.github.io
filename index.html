@@ -32,14 +32,58 @@
         * { margin:0; padding:0; box-sizing:border-box; }
         html { scroll-behavior: smooth; }
         body { font-family:'Outfit',sans-serif; background:var(--bg-primary); color:var(--text-primary); line-height:1.7; overflow-x:hidden; transition:background var(--transition-speed) ease,color var(--transition-speed) ease; }
-        .bg-grid { position:fixed; top:0; left:0; width:100%; height:100%; background-image:linear-gradient(var(--grid-color) 1px,transparent 1px),linear-gradient(90deg,var(--grid-color) 1px,transparent 1px); background-size:50px 50px; pointer-events:none; z-index:-1; }
-        .glow-orb { position:fixed; width:600px; height:600px; border-radius:50%; filter:blur(150px); opacity:0.15; pointer-events:none; z-index:-1; }
-        [data-theme="light"] .glow-orb { opacity:0.08; }
-        .glow-orb-1 { top:-200px; right:-200px; background:var(--accent-cyan); animation:float 8s ease-in-out infinite; }
-        .glow-orb-2 { bottom:-200px; left:-200px; background:var(--accent-magenta); animation:float 8s ease-in-out infinite reverse; }
-        .glow-orb-3 { top:50%; left:50%; transform:translate(-50%,-50%); background:var(--accent-purple); width:400px; height:400px; animation:pulse-glow 6s ease-in-out infinite; }
-        @keyframes float { 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-30px) rotate(5deg)} }
-        @keyframes pulse-glow { 0%,100%{opacity:0.1;transform:translate(-50%,-50%) scale(1)} 50%{opacity:0.2;transform:translate(-50%,-50%) scale(1.1)} }
+    /* ── ADVANCED BACKGROUND ── */
+    .bg-canvas {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        pointer-events: none; z-index: -1;
+    }
+    .bg-grid {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background-image:
+            linear-gradient(var(--grid-color) 1px, transparent 1px),
+            linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+        background-size: 60px 60px;
+        pointer-events: none; z-index: -1;
+    }
+    .glow-orb { position:fixed; border-radius:50%; filter:blur(120px); opacity:0.18; pointer-events:none; z-index:-1; }
+    [data-theme="light"] .glow-orb { opacity:0.09; }
+    .glow-orb-1 { width:700px; height:700px; top:-250px; right:-200px; background:radial-gradient(circle, #00d4ff 0%, transparent 70%); animation:orb1 12s ease-in-out infinite; }
+    .glow-orb-2 { width:600px; height:600px; bottom:-200px; left:-150px; background:radial-gradient(circle, #ff00aa 0%, transparent 70%); animation:orb2 10s ease-in-out infinite; }
+    .glow-orb-3 { width:500px; height:500px; top:40%; left:30%; background:radial-gradient(circle, #7b2dff 0%, transparent 70%); animation:orb3 14s ease-in-out infinite; }
+    .glow-orb-4 { width:350px; height:350px; top:60%; right:10%; background:radial-gradient(circle, #00ff88 0%, transparent 70%); opacity:0.08; animation:orb4 9s ease-in-out infinite; }
+    @keyframes orb1 { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(-60px,80px) scale(1.1)} 66%{transform:translate(40px,-40px) scale(0.9)} }
+    @keyframes orb2 { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(80px,-60px) scale(1.15)} 66%{transform:translate(-30px,50px) scale(0.95)} }
+    @keyframes orb3 { 0%,100%{transform:translate(-50%,-50%) scale(1); opacity:0.18} 50%{transform:translate(-50%,-50%) scale(1.2); opacity:0.25} }
+    @keyframes orb4 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-40px,30px)} }
+
+    /* Floating particles */
+    .particles { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:-1; overflow:hidden; }
+    .particle {
+        position:absolute; width:2px; height:2px; background:var(--accent-cyan);
+        border-radius:50%; opacity:0; animation:particle-float linear infinite;
+    }
+    @keyframes particle-float {
+        0% { transform:translateY(100vh) translateX(0); opacity:0; }
+        10% { opacity:0.6; }
+        90% { opacity:0.3; }
+        100% { transform:translateY(-100px) translateX(var(--drift,20px)); opacity:0; }
+    }
+
+    /* Noise texture overlay */
+    .noise-overlay {
+        position:fixed; top:0; left:0; width:100%; height:100%;
+        pointer-events:none; z-index:-1; opacity:0.025;
+        background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        background-size:200px 200px;
+    }
+    [data-theme="light"] .noise-overlay { opacity:0.015; }
+
+    /* Animated border glow on hero */
+    .hero::before {
+        content:''; position:absolute; inset:0;
+        background:radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,212,255,0.06) 0%, transparent 60%);
+        pointer-events:none;
+    }
         nav { position:fixed; top:0; left:0; right:0; padding:1rem 5%; display:flex; justify-content:space-between; align-items:center; z-index:1000; backdrop-filter:blur(20px); background:rgba(10,10,15,0.8); border-bottom:1px solid var(--border-color); transition:background var(--transition-speed) ease; }
         [data-theme="light"] nav { background:rgba(255,255,255,0.9); }
         .logo { font-family:'JetBrains Mono',monospace; font-size:1.5rem; font-weight:700; background:var(--gradient-1); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
@@ -307,9 +351,12 @@
 </div>
 
 <div class="bg-grid"></div>
+<div class="noise-overlay"></div>
 <div class="glow-orb glow-orb-1"></div>
 <div class="glow-orb glow-orb-2"></div>
 <div class="glow-orb glow-orb-3"></div>
+<div class="glow-orb glow-orb-4"></div>
+<div class="particles" id="particles"></div>
 
 <div class="floating-elements">
     <div class="floating-icon">🤖</div>
@@ -578,10 +625,10 @@
 
     <!-- Tab Filter -->
     <div class="projects-tabs">
-        <button class="proj-tab active" onclick="filterProjects('all')" data-i18n="tab.all">All Projects</button>
-        <button class="proj-tab" onclick="filterProjects('public')" data-i18n="tab.public">🟢 Public / GitHub</button>
-        <button class="proj-tab" onclick="filterProjects('company')" data-i18n="tab.company">🔒 Company Work</button>
-        <button class="proj-tab" onclick="filterProjects('college')" data-i18n="tab.college">🎓 College Lab</button>
+        <button class="proj-tab active" onclick="filterProjects('all',this)" data-i18n="tab.all">All Projects</button>
+        <button class="proj-tab" onclick="filterProjects('public',this)" data-i18n="tab.public">🟢 Public / GitHub</button>
+        <button class="proj-tab" onclick="filterProjects('company',this)" data-i18n="tab.company">🔒 Company Work</button>
+        <button class="proj-tab" onclick="filterProjects('college',this)" data-i18n="tab.college">🎓 College Lab</button>
     </div>
 
     <!-- GROUP 1: PUBLIC NEW PROJECTS -->
@@ -665,7 +712,7 @@
                         <span style="font-size:0.75rem;color:var(--accent-green);font-family:'JetBrains Mono',monospace">Live 2025</span>
                     </div>
                 </div>
-            </div></div>
+            </div></div></div>
         <div class="carousel-controls">
             <button class="carousel-btn" onclick="carouselPrev(this)">&#8592;</button>
             <div class="carousel-dots"></div>
@@ -801,7 +848,7 @@
                         </div>
                     </div>
                 </div>
-            </div></div>
+            </div></div></div>
         <div class="carousel-controls">
             <button class="carousel-btn" onclick="carouselPrev(this)">&#8592;</button>
             <div class="carousel-dots"></div>
@@ -880,11 +927,14 @@
                     </div>
                 </div>
             </div>
-
+        </div></div></div>
+        <div class="carousel-controls">
+            <button class="carousel-btn" onclick="carouselPrev(this)">&#8592;</button>
+            <div class="carousel-dots"></div>
+            <button class="carousel-btn" onclick="carouselNext(this)">&#8594;</button>
         </div>
+        <div class="carousel-progress-bar"><div class="carousel-progress-fill"></div></div>
     </div>
-</section>
-
 
 </section>
 
@@ -1311,21 +1361,22 @@ function resetAutoPlay(groupEl) {
     startAutoPlay(groupEl);
 }
 
-function filterProjects(category) {
+function filterProjects(category, btn) {
     document.querySelectorAll('.proj-tab').forEach(t => t.classList.remove('active'));
-    event.target.classList.add('active');
+    if (btn) btn.classList.add('active');
     document.querySelectorAll('.projects-group').forEach(g => {
         const show = category === 'all' || g.dataset.group === category;
-        g.style.display = show ? 'block' : 'none';
-        if (show) {
-            // Re-init carousel when shown
-            setTimeout(() => {
-                if (!carousels.has(g)) initCarousel(g);
-                else resetAutoPlay(g);
-            }, 50);
-        } else {
+        if (!show) {
+            g.style.display = 'none';
             const state = carousels.get(g);
             if (state) { clearTimeout(state.timer); clearInterval(state.fillTimer); }
+        } else {
+            g.style.display = 'block';
+            // Wait for browser to paint, then reinit carousel with correct dimensions
+            requestAnimationFrame(() => requestAnimationFrame(() => {
+                carousels.delete(g);
+                initCarousel(g);
+            }));
         }
     });
 }
@@ -1372,6 +1423,24 @@ window.addEventListener('load', () => {
     setLanguage(savedLang);
     // Init all visible carousels
     document.querySelectorAll('.projects-group').forEach(g => initCarousel(g));
+    // Generate floating particles
+    const container = document.getElementById('particles');
+    const colors = ['#00d4ff','#ff00aa','#7b2dff','#00ff88'];
+    for (let i = 0; i < 35; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        const size = Math.random() * 3 + 1;
+        p.style.cssText = `
+            left:${Math.random()*100}%;
+            width:${size}px; height:${size}px;
+            background:${colors[Math.floor(Math.random()*colors.length)]};
+            animation-duration:${8+Math.random()*15}s;
+            animation-delay:${Math.random()*10}s;
+            --drift:${(Math.random()-0.5)*120}px;
+            box-shadow:0 0 ${size*3}px currentColor;
+        `;
+        container.appendChild(p);
+    }
 });
 window.addEventListener('resize', () => {
     document.querySelectorAll('.projects-group').forEach(g => {
