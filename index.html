@@ -1273,10 +1273,33 @@ function initCarousel(groupEl) {
         });
     }
 
-    const state = { index: 0, total: origCards.length, timer: null, fillTimer: null, fillPct: 0, paused: false };
+    const state = { index: 0, total: origCards.length, timer: null, fillTimer: null, fillPct: 0 };
     carousels.set(groupEl, state);
     setSlide(groupEl, 0, false);
     startAutoPlay(groupEl);
+
+    // ── Pause on hover, resume on leave ──
+    // Remove old listeners by cloning the element's event binding
+    groupEl._onEnter && groupEl.removeEventListener('mouseenter', groupEl._onEnter);
+    groupEl._onLeave && groupEl.removeEventListener('mouseleave', groupEl._onLeave);
+
+    groupEl._onEnter = () => {
+        const s = carousels.get(groupEl);
+        if (!s) return;
+        clearTimeout(s.timer);
+        clearInterval(s.fillTimer);
+        // Freeze progress bar in place (don't reset)
+    };
+
+    groupEl._onLeave = () => {
+        const s = carousels.get(groupEl);
+        if (!s) return;
+        // Resume: restart from current fill position
+        resumeAutoPlay(groupEl);
+    };
+
+    groupEl.addEventListener('mouseenter', groupEl._onEnter);
+    groupEl.addEventListener('mouseleave', groupEl._onLeave);
 }
 
 function getCardWidth(groupEl) {
@@ -1345,19 +1368,37 @@ function startAutoPlay(groupEl) {
     if (fill) fill.style.width = '0%';
     const step = 100 / (SLIDE_INTERVAL / 80);
     state.fillTimer = setInterval(() => {
-        if (state.paused) return;
         state.fillPct += step;
         if (fill) fill.style.width = Math.min(state.fillPct, 100) + '%';
-        if (state.fillPct >= 100) { clearInterval(state.fillTimer); }
+        if (state.fillPct >= 100) clearInterval(state.fillTimer);
     }, 80);
-    state.timer = setTimeout(() => { if (!state.paused) { slideNext(groupEl); startAutoPlay(groupEl); } }, SLIDE_INTERVAL);
+    state.timer = setTimeout(() => {
+        slideNext(groupEl);
+        startAutoPlay(groupEl);
+    }, SLIDE_INTERVAL);
+}
+
+function resumeAutoPlay(groupEl) {
+    // Resume from current fill position (not from 0)
+    const state = carousels.get(groupEl);
+    if (!state) return;
+    clearInterval(state.fillTimer);
+    clearTimeout(state.timer);
+    const fill = groupEl.querySelector('.carousel-progress-fill');
+    const remaining = SLIDE_INTERVAL * (1 - state.fillPct / 100);
+    const step = 100 / (SLIDE_INTERVAL / 80);
+    state.fillTimer = setInterval(() => {
+        state.fillPct += step;
+        if (fill) fill.style.width = Math.min(state.fillPct, 100) + '%';
+        if (state.fillPct >= 100) clearInterval(state.fillTimer);
+    }, 80);
+    state.timer = setTimeout(() => {
+        slideNext(groupEl);
+        startAutoPlay(groupEl);
+    }, Math.max(remaining, 300));
 }
 
 function resetAutoPlay(groupEl) {
-    const state = carousels.get(groupEl);
-    if (!state) return;
-    clearTimeout(state.timer);
-    clearInterval(state.fillTimer);
     startAutoPlay(groupEl);
 }
 
@@ -1381,13 +1422,7 @@ function filterProjects(category, btn) {
     });
 }
 
-// Pause on hover
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.projects-group').forEach(g => {
-        g.addEventListener('mouseenter', () => { const s = carousels.get(g); if(s) s.paused = true; });
-        g.addEventListener('mouseleave', () => { const s = carousels.get(g); if(s) { s.paused = false; resetAutoPlay(g); } });
-    });
-});
+// Hover listeners are now inside initCarousel() — no DOMContentLoaded needed
 
 
 // Scroll animations
