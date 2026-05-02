@@ -620,127 +620,36 @@
 <section id="projects">
     <div class="section-header">
         <h2 data-i18n="proj.title">Projects</h2>
-        <p data-i18n="proj.sub">Public portfolio · Company work · College lab</p>
+        <p data-i18n="proj.sub">Company work · College lab</p>
     </div>
 
     <!-- Tab Filter -->
     <div class="projects-tabs">
         <button class="proj-tab active" onclick="filterProjects('all',this)" data-i18n="tab.all">All Projects</button>
-        <button class="proj-tab" onclick="filterProjects('public',this)" data-i18n="tab.public">🟢 Public / GitHub</button>
         <button class="proj-tab" onclick="filterProjects('company',this)" data-i18n="tab.company">🔒 Company Work</button>
-        <button class="proj-tab" onclick="filterProjects('college',this)" data-i18n="tab.college">🎓 College Lab</button>
-    </div>
-
-    <!-- GROUP 1: PUBLIC NEW PROJECTS -->
-    <div class="projects-group" data-group="public">
-        <div class="group-label">
-            <div class="group-line"></div>
-            <h3>Public GitHub Projects</h3>
-            <span class="group-badge badge-public">🟢 Open Source</span>
-            <div class="group-line"></div>
-        </div>
-        <div class="carousel-wrapper"><div class="carousel-track">
-
-            <!-- Project 1: Defect Detection -->
-            <div class="project-card fade-in" data-category="public">
-                <div class="project-image" style="background:linear-gradient(135deg,#0a1628 0%,#0d2137 100%)">
-                    <div class="project-status-badge status-new">🟢 NEW</div>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5">
-                        <rect x="2" y="2" width="20" height="20" rx="3"/>
-                        <circle cx="12" cy="12" r="4"/>
-                        <path d="M12 8v-2M12 18v-2M8 12H6M18 12h-2" stroke-linecap="round"/>
-                        <path d="M9.5 9.5L8 8M16 16l-1.5-1.5M14.5 9.5L16 8M8 16l1.5-1.5" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <div class="project-content">
-                    <h3>YOLOv8 Surface Defect Detection</h3>
-                    <p>Real-time industrial defect detection pipeline using YOLOv8m with two-stage transfer learning. Trained on MVTec AD public dataset — achieving production-grade accuracy with two-stage transfer learning on industrial surface images.</p>
-                    <div class="project-tech">
-                        <span>YOLOv8</span><span>Python</span><span>OpenCV</span><span>COCO Transfer</span><span>MVTec AD</span>
-                    </div>
-                    <div class="project-footer">
-                        <a href="https://github.com/Sohamkarpe/yolov8-defect-detection" target="_blank" class="project-link">View on GitHub →</a>
-                        <span style="font-size:0.75rem;color:var(--accent-green);font-family:'JetBrains Mono',monospace">Live 2025</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 2: PyQt5 HMI -->
-            <div class="project-card fade-in" data-category="public">
-                <div class="project-image" style="background:linear-gradient(135deg,#0f1a10 0%,#1a2e1a 100%)">
-                    <div class="project-status-badge status-new">🟢 NEW</div>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="1.5">
-                        <rect x="2" y="3" width="20" height="14" rx="2"/>
-                        <rect x="6" y="7" width="5" height="5" rx="1" stroke="var(--accent-cyan)"/>
-                        <path d="M14 8h3M14 11h3" stroke="var(--accent-cyan)" stroke-linecap="round"/>
-                        <path d="M8 21h8M12 17v4"/>
-                        <circle cx="8.5" cy="9.5" r="1" fill="var(--accent-green)"/>
-                    </svg>
-                </div>
-                <div class="project-content">
-                    <h3>Industrial Vision Inspection HMI</h3>
-                    <p>PyQt5-based HMI for real-time machine vision inspection. Features live camera feed, YOLOv8 defect overlay, status monitoring, configurable inspection parameters, and automated PDF/Excel reporting. Operator-friendly, no programming knowledge needed.</p>
-                    <div class="project-tech">
-                        <span>PyQt5</span><span>Python</span><span>OpenCV</span><span>YOLOv8</span><span>ReportLab</span>
-                    </div>
-                    <div class="project-footer">
-                        <a href="https://github.com/Sohamkarpe/industrial-hmi-inspection" target="_blank" class="project-link">View on GitHub →</a>
-                        <span style="font-size:0.75rem;color:var(--accent-green);font-family:'JetBrains Mono',monospace">Live 2025</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3: Camera Interface -->
-            <div class="project-card fade-in" data-category="public">
-                <div class="project-image" style="background:linear-gradient(135deg,#1a0a2e 0%,#2e1a0f 100%)">
-                    <div class="project-status-badge status-new">🟢 NEW</div>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="1.5">
-                        <circle cx="12" cy="12" r="4"/>
-                        <path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
-                        <rect x="7" y="7" width="10" height="10" rx="2" stroke="var(--accent-cyan)" opacity="0.4"/>
-                        <path d="M9 3.5A10 10 0 013.5 9M20.5 9A10 10 0 0121 12" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <div class="project-content">
-                    <h3>Camera Hardware Interface & Calibration</h3>
-                    <p>Python-based industrial camera integration library with hardware abstraction. Supports USB3 Vision cameras, full camera calibration (intrinsic/extrinsic), distortion correction, pixel-to-mm conversion, and multi-camera synchronization.</p>
-                    <div class="project-tech">
-                        <span>Python</span><span>OpenCV</span><span>USB3 Vision</span><span>Calibration</span><span>NumPy</span>
-                    </div>
-                    <div class="project-footer">
-                        <a href="https://github.com/Sohamkarpe/camera-calibration-interface" target="_blank" class="project-link">View on GitHub →</a>
-                        <span style="font-size:0.75rem;color:var(--accent-green);font-family:'JetBrains Mono',monospace">Live 2025</span>
-                    </div>
-                </div>
-            </div></div></div>
-        <div class="carousel-controls">
-            <button class="carousel-btn" onclick="carouselPrev(this)">&#8592;</button>
-            <div class="carousel-dots"></div>
-            <button class="carousel-btn" onclick="carouselNext(this)">&#8594;</button>
-        </div>
-        <div class="carousel-progress-bar"><div class="carousel-progress-fill"></div></div>
+        <button class="proj-tab" onclick="filterProjects('college',this)" data-i18n="tab.college" data-i18n="proj.status.college">🎓 College Lab</button>
     </div>
 
     <!-- GROUP 2: COMPANY WORK -->
     <div class="projects-group" data-group="company" style="margin-top:3rem">
         <div class="group-label">
             <div class="group-line"></div>
-            <h3>Company Work</h3>
-            <span class="group-badge badge-company">🔒 Company IP — Not Shareable</span>
+            <h3 data-i18n="group.company">Company Work</h3>
+            <span class="group-badge badge-company" data-i18n="group.company.badge">🔒 Company IP — Not Shareable</span>
             <div class="group-line"></div>
         </div>
         <div class="carousel-wrapper"><div class="carousel-track">
 
             <div class="project-card locked fade-in" data-category="company">
                 <div class="project-image" style="background:linear-gradient(135deg,#1a1200 0%,#2e1a00 100%)">
-                    <div class="project-status-badge status-locked">🔒 Confidential</div>
+                    <div class="project-status-badge status-locked" data-i18n="proj.status.locked">🔒 Confidential</div>
                     <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="1.5">
                         <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0-6v6m18-6v6"/>
                         <circle cx="12" cy="12" r="3"/>
                     </svg>
                 </div>
                 <div class="project-content">
-                    <h3>Real-Time AI Visual Inspection System</h3>
+                    <h3 data-i18n="proj.c1.title">Real-Time AI Visual Inspection System</h3>
                     <div style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.25rem 0.6rem;background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.4);border-radius:20px;font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:#ffd700;margin-bottom:0.5rem">🏆 Master Thesis — Best Thesis Nominated</div>
                     <p>Master's thesis project (Nominated for Best Thesis Award). Complete AI-based visual inspection system deployed at mech-tron GmbH — YOLOv8m (89.3% mAP@0.5), PyQt5 HMI, 5-axis hardware, operator-driven training pipeline, 6 deployed model versions.</p>
                     <div class="project-tech">
@@ -748,7 +657,7 @@
                     </div>
                     <div class="project-footer">
                         <div class="lock-tooltip">
-                            <span class="project-link locked-link">🔒 Company IP — Cannot Share</span>
+                            <span class="project-link locked-link" data-i18n="proj.locked">🔒 Company IP — Cannot Share</span>
                             <span class="tooltip-text">Code developed at mech-tron GmbH. See public demo version on GitHub instead.</span>
                         </div>
                     </div>
@@ -757,7 +666,7 @@
 
             <div class="project-card locked fade-in" data-category="company">
                 <div class="project-image" style="background:linear-gradient(135deg,#1a0a00 0%,#2e1000 100%)">
-                    <div class="project-status-badge status-locked">🔒 Confidential</div>
+                    <div class="project-status-badge status-locked" data-i18n="proj.status.locked">🔒 Confidential</div>
                     <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="1.5">
                         <circle cx="12" cy="8" r="4"/>
                         <path d="M12 8v-2m0 6v-2m-3-1H7m8 0h-2"/>
@@ -772,7 +681,7 @@
                     </div>
                     <div class="project-footer">
                         <div class="lock-tooltip">
-                            <span class="project-link locked-link">🔒 Company IP — Cannot Share</span>
+                            <span class="project-link locked-link" data-i18n="proj.locked">🔒 Company IP — Cannot Share</span>
                             <span class="tooltip-text">Developed at mech-tron GmbH production environment.</span>
                         </div>
                     </div>
@@ -781,7 +690,7 @@
 
             <div class="project-card locked fade-in" data-category="company">
                 <div class="project-image" style="background:linear-gradient(135deg,#1a1000 0%,#1a0a1a 100%)">
-                    <div class="project-status-badge status-locked">🔒 Confidential</div>
+                    <div class="project-status-badge status-locked" data-i18n="proj.status.locked">🔒 Confidential</div>
                     <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="1.5">
                         <circle cx="12" cy="12" r="9"/>
                         <path d="M12 3v3M12 18v3M3 12h3M18 12h3"/>
@@ -789,14 +698,14 @@
                     </svg>
                 </div>
                 <div class="project-content">
-                    <h3>Automated Rotary Inspection System</h3>
+                    <h3 data-i18n="proj.c3.title">Automated Rotary Inspection System</h3>
                     <p>Motorized circular turntable and movable camera mount controlled via Qt HMI and Arduino Mega. Enables full 360° automated product inspection with precise stepper motor control and real-time serial communication.</p>
                     <div class="project-tech">
                         <span>Arduino Mega</span><span>Qt</span><span>C++</span><span>PySerial</span><span>Motor Control</span>
                     </div>
                     <div class="project-footer">
                         <div class="lock-tooltip">
-                            <span class="project-link locked-link">🔒 Company IP — Cannot Share</span>
+                            <span class="project-link locked-link" data-i18n="proj.locked">🔒 Company IP — Cannot Share</span>
                             <span class="tooltip-text">Developed at mech-tron GmbH production line.</span>
                         </div>
                     </div>
@@ -805,7 +714,7 @@
 
             <div class="project-card locked fade-in" data-category="company">
                 <div class="project-image" style="background:linear-gradient(135deg,#150a1a 0%,#1a0012 100%)">
-                    <div class="project-status-badge status-locked">🔒 Confidential</div>
+                    <div class="project-status-badge status-locked" data-i18n="proj.status.locked">🔒 Confidential</div>
                     <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-magenta)" stroke-width="1.5">
                         <circle cx="9" cy="7" r="4"/>
                         <circle cx="15" cy="7" r="4"/>
@@ -813,14 +722,14 @@
                     </svg>
                 </div>
                 <div class="project-content">
-                    <h3>Facial Recognition System</h3>
+                    <h3 data-i18n="proj.c4.title">Facial Recognition System</h3>
                     <p>Facial recognition registration and authentication system integrating deep learning CV models with Python backend services and C++. Real-time face detection, feature extraction, and secure identity verification.</p>
                     <div class="project-tech">
                         <span>OpenCV</span><span>Deep Learning</span><span>Python</span><span>C++</span>
                     </div>
                     <div class="project-footer">
                         <div class="lock-tooltip">
-                            <span class="project-link locked-link">🔒 Company IP — Cannot Share</span>
+                            <span class="project-link locked-link" data-i18n="proj.locked">🔒 Company IP — Cannot Share</span>
                             <span class="tooltip-text">Developed at mech-tron GmbH.</span>
                         </div>
                     </div>
@@ -829,7 +738,7 @@
 
             <div class="project-card locked fade-in" data-category="company">
                 <div class="project-image" style="background:linear-gradient(135deg,#0a1020 0%,#0f1a30 100%)">
-                    <div class="project-status-badge status-locked">🔒 Confidential</div>
+                    <div class="project-status-badge status-locked" data-i18n="proj.status.locked">🔒 Confidential</div>
                     <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="1.5">
                         <path d="M9 12l2 2 4-4"/><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         <rect x="14" y="3" width="7" height="5" rx="1"/><path d="M17 8v3M15 10h4"/>
@@ -843,7 +752,7 @@
                     </div>
                     <div class="project-footer">
                         <div class="lock-tooltip">
-                            <span class="project-link locked-link">🔒 Company IP — Cannot Share</span>
+                            <span class="project-link locked-link" data-i18n="proj.locked">🔒 Company IP — Cannot Share</span>
                             <span class="tooltip-text">Developed at mech-tron GmbH. Oct 2024 – Feb 2025.</span>
                         </div>
                     </div>
@@ -861,15 +770,15 @@
     <div class="projects-group" data-group="college" style="margin-top:3rem">
         <div class="group-label">
             <div class="group-line"></div>
-            <h3>College Lab Projects</h3>
-            <span class="group-badge badge-college">🎓 Deggendorf Institute of Technology</span>
+            <h3 data-i18n="group.college">College Lab Projects</h3>
+            <span class="group-badge badge-college" data-i18n="group.college.badge">🎓 Deggendorf Institute of Technology</span>
             <div class="group-line"></div>
         </div>
         <div class="carousel-wrapper"><div class="carousel-track">
 
             <div class="project-card college fade-in" data-category="college">
                 <div class="project-image" style="background:linear-gradient(135deg,#100a1a 0%,#1a0f2e 100%)">
-                    <div class="project-status-badge status-college">🎓 College Lab</div>
+                    <div class="project-status-badge status-college" data-i18n="proj.status.college">🎓 College Lab</div>
                     <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="1.5">
                         <circle cx="12" cy="8" r="5"/>
                         <path d="M3 21v-2a4 4 0 014-4h10a4 4 0 014 4v2"/>
@@ -877,7 +786,7 @@
                     </svg>
                 </div>
                 <div class="project-content">
-                    <h3>Liveness Detection using Computer Vision</h3>
+                    <h3 data-i18n="proj.l1.title">Liveness Detection using Computer Vision</h3>
                     <p>YOLOv8-based human liveness detection system achieving 91% accuracy across multi-camera setup. Complete real-time inference pipeline optimized for edge platforms, validated under varying lighting conditions and camera angles.</p>
                     <div class="project-tech">
                         <span>YOLOv8</span><span>Python</span><span>Dataset Engineering</span><span>Edge</span>
@@ -890,13 +799,13 @@
 
             <div class="project-card college fade-in" data-category="college">
                 <div class="project-image" style="background:linear-gradient(135deg,#16213e 0%,#1a1a2e 100%)">
-                    <div class="project-status-badge status-college">🎓 College Lab</div>
+                    <div class="project-status-badge status-college" data-i18n="proj.status.college">🎓 College Lab</div>
                     <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="1.5">
                         <path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/><circle cx="20" cy="9" r="2" fill="var(--accent-purple)"/>
                     </svg>
                 </div>
                 <div class="project-content">
-                    <h3>Building Height Detection using AI</h3>
+                    <h3 data-i18n="proj.l2.title">Building Height Detection using AI</h3>
                     <p>Machine learning system for automated building height estimation using MATLAB and Python. Designed feature extraction pipelines, real-time data visualization workflows, and end-to-end ML pipeline for architectural and urban planning scenarios.</p>
                     <div class="project-tech">
                         <span>MATLAB</span><span>Python</span><span>ML</span><span>Feature Extraction</span>
@@ -909,7 +818,7 @@
 
             <div class="project-card college fade-in" data-category="college">
                 <div class="project-image" style="background:linear-gradient(135deg,#0f3460 0%,#1a1a2e 100%)">
-                    <div class="project-status-badge status-college">🎓 College Lab</div>
+                    <div class="project-status-badge status-college" data-i18n="proj.status.college">🎓 College Lab</div>
                     <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5">
                         <rect x="7" y="7" width="10" height="10" rx="2"/>
                         <circle cx="12" cy="12" r="2"/>
@@ -917,7 +826,7 @@
                     </svg>
                 </div>
                 <div class="project-content">
-                    <h3>Pick-and-Place SCARA Robot Simulation</h3>
+                    <h3 data-i18n="proj.l3.title">Pick-and-Place SCARA Robot Simulation</h3>
                     <p>Fully simulated industrial SCARA robot in Gazebo using ROS. Implemented complete forward/inverse kinematics, motion planning, and control algorithms for precise object manipulation in factory automation scenarios.</p>
                     <div class="project-tech">
                         <span>ROS</span><span>Gazebo</span><span>Python</span><span>Kinematics</span><span>Motion Planning</span>
@@ -1060,7 +969,7 @@ const T = {
         'skills.cat3':'Software Development & HMI','skills.cat4':'Embedded Systems & Hardware Integration',
         'skills.cat5':'DevOps, Testing & Tools','skills.cat6':'Certifications',
         'skills.cat7':'Languages','skills.cat8':'Soft Skills',
-        'proj.title':'Projects','proj.sub':'Public portfolio · Company work · College lab',
+        'proj.title':'Projects','proj.sub':'Company work · College lab',
         'tab.all':'All Projects','tab.public':'🟢 Public / GitHub','tab.company':'🔒 Company Work',
         'tab.college':'🎓 College Lab','tab.intern':'🔧 Internship / Thesis',
         'group.public':'Public GitHub Projects','group.public.badge':'🟢 Open Source',
@@ -1087,6 +996,8 @@ const T = {
         'proj.c5.title':'Automated Testing & Multi-Camera Integration Framework',
         'proj.c5.desc':'pytest-based automated testing framework for validating YOLOv8 models with CI/CD pipeline integration. Integrated multiple industrial cameras for synchronized image capture with sensor fusion and spatial alignment for 3D scene understanding.',
         'proj.locked':'🔒 Company IP — Cannot Share',
+        'proj.status.locked':'🔒 Confidential',
+        'proj.status.college':'🎓 College Lab',
         'proj.l1.title':'Liveness Detection using Computer Vision',
         'proj.l1.desc':'YOLOv8-based human liveness detection system achieving 91% accuracy across multi-camera setup. Complete real-time inference pipeline optimized for edge platforms, validated under varying lighting conditions.',
         'proj.l1.date':'Mar 2024 – Jun 2024 | DIT HiWi',
@@ -1161,7 +1072,7 @@ const T = {
         'skills.cat3':'Softwareentwicklung & HMI','skills.cat4':'Eingebettete Systeme & Hardware-Integration',
         'skills.cat5':'DevOps, Testing & Werkzeuge','skills.cat6':'Zertifizierungen',
         'skills.cat7':'Sprachen','skills.cat8':'Soft Skills',
-        'proj.title':'Projekte','proj.sub':'Öffentliches Portfolio · Unternehmensarbeit · Hochschulprojekte',
+        'proj.title':'Projekte','proj.sub':'Unternehmensarbeit · Hochschulprojekte',
         'tab.all':'Alle Projekte','tab.public':'🟢 Öffentlich / GitHub','tab.company':'🔒 Unternehmensarbeit',
         'tab.college':'🎓 Hochschulprojekte','tab.intern':'🔧 Praktikum / Abschlussarbeit',
         'group.public':'Öffentliche GitHub-Projekte','group.public.badge':'🟢 Open Source',
@@ -1188,6 +1099,8 @@ const T = {
         'proj.c5.title':'Automatisiertes Test- und Multi-Kamera-Integrationsframework',
         'proj.c5.desc':'pytest-basiertes automatisiertes Test-Framework zur Validierung von YOLOv8-Modellen mit CI/CD. Integration mehrerer Industriekameras für synchrone Bilderfassung mit Sensorfusion und räumlicher Ausrichtung.',
         'proj.locked':'🔒 Firmen-IP — Nicht teilbar',
+        'proj.status.locked':'🔒 Vertraulich',
+        'proj.status.college':'🎓 Hochschulprojekt',
         'proj.l1.title':'Lebendigkeitserkennung mit Computer Vision',
         'proj.l1.desc':'YOLOv8-basiertes System zur menschlichen Lebendigkeitserkennung mit 91% Genauigkeit. Vollständige Echtzeit-Inferenz-Pipeline für Edge-Plattformen, validiert unter verschiedenen Lichtbedingungen.',
         'proj.l1.date':'März 2024 – Juni 2024 | DIT HiWi',
