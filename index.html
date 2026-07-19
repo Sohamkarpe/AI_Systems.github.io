@@ -628,7 +628,7 @@
     <div class="projects-tabs">
         <button class="proj-tab active" onclick="filterProjects('all',this)" data-i18n="tab.all">All Projects</button>
         <button class="proj-tab" onclick="filterProjects('company',this)" data-i18n="tab.company">🔒 Company Work</button>
-        <button class="proj-tab" onclick="filterProjects('college',this)" data-i18n="tab.college" data-i18n="proj.status.college">🎓 College Lab</button>
+        <button class="proj-tab" onclick="filterProjects('college',this)" data-i18n="tab.college">🟢 Open Source</button>
     </div>
 
     <!-- GROUP 2: COMPANY WORK -->
@@ -767,56 +767,68 @@
         <div class="carousel-progress-bar"><div class="carousel-progress-fill"></div></div>
     </div>
 
-    <!-- GROUP 3: COLLEGE LAB -->
+
+    <!-- GROUP 3: OPEN SOURCE / GITHUB PROJECTS -->
     <div class="projects-group" data-group="college" style="margin-top:3rem">
         <div class="group-label">
             <div class="group-line"></div>
-            <h3 data-i18n="group.college">College Lab Projects</h3>
-            <span class="group-badge badge-college" data-i18n="group.college.badge">🎓 Deggendorf Institute of Technology</span>
+            <h3 data-i18n="group.college">Open Source — GitHub Projects</h3>
+            <span class="group-badge badge-college" style="background:rgba(0,255,136,0.15);color:var(--accent-green);border:1px solid rgba(0,255,136,0.3)">🟢 Public on GitHub</span>
             <div class="group-line"></div>
         </div>
         <div class="carousel-wrapper"><div class="carousel-track">
 
+            <!-- Liveness Detection -->
             <div class="project-card college fade-in" data-category="college">
                 <div class="project-image" style="background:linear-gradient(135deg,#100a1a 0%,#1a0f2e 100%)">
-                    <div class="project-status-badge status-college" data-i18n="proj.status.college">🎓 College Lab</div>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="1.5">
+                    <div class="project-status-badge" style="background:rgba(0,255,136,0.2);color:var(--accent-green);border:1px solid rgba(0,255,136,0.4)">🟢 Open Source</div>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="1.5">
                         <circle cx="12" cy="8" r="5"/>
                         <path d="M3 21v-2a4 4 0 014-4h10a4 4 0 014 4v2"/>
-                        <circle cx="12" cy="8" r="2" fill="var(--accent-purple)" opacity="0.3"/>
+                        <circle cx="12" cy="8" r="2" fill="var(--accent-green)" opacity="0.3"/>
                     </svg>
                 </div>
                 <div class="project-content">
-                    <h3 data-i18n="proj.l1.title">Liveness Detection using Computer Vision</h3>
-                    <p>YOLOv8-based human liveness detection system achieving 91% accuracy across multi-camera setup. Complete real-time inference pipeline optimized for edge platforms, validated under varying lighting conditions and camera angles.</p>
+                    <h3><a href="https://github.com/Sohamkarpe/liveness_detection" target="_blank" style="color:inherit;text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='var(--accent-green)'" onmouseout="this.style.color='inherit'" data-i18n="proj.l1.title">Liveness Detection using Computer Vision</a></h3>
+                    <p data-i18n="proj.l1.desc">YOLOv8-based human liveness detection system achieving 91% accuracy across multi-camera setup. Complete real-time inference pipeline optimized for edge platforms, validated under varying lighting conditions and camera angles.</p>
                     <div class="project-tech">
-                        <span>YOLOv8</span><span>Python</span><span>Dataset Engineering</span><span>Edge</span>
+                        <span>YOLOv8</span><span>Python</span><span>OpenCV</span><span>Multi-Camera</span><span>Edge AI</span>
                     </div>
                     <div class="project-footer">
-                        <span class="project-link college-link">Mar 2024 – Jun 2024 | DIT HiWi</span>
+                        <a href="https://github.com/Sohamkarpe/liveness_detection" target="_blank" class="project-link college-link" style="color:var(--accent-green)">
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            View on GitHub →
+                        </a>
+                        <span style="font-size:0.75rem;color:var(--text-muted)">Mar 2024 – Jun 2024 | DIT</span>
                     </div>
                 </div>
             </div>
 
+            <!-- Building Height Detection -->
             <div class="project-card college fade-in" data-category="college">
                 <div class="project-image" style="background:linear-gradient(135deg,#16213e 0%,#1a1a2e 100%)">
-                    <div class="project-status-badge status-college" data-i18n="proj.status.college">🎓 College Lab</div>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="1.5">
-                        <path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/><circle cx="20" cy="9" r="2" fill="var(--accent-purple)"/>
+                    <div class="project-status-badge" style="background:rgba(0,255,136,0.2);color:var(--accent-green);border:1px solid rgba(0,255,136,0.4)">🟢 Open Source</div>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="1.5">
+                        <path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/><circle cx="20" cy="9" r="2" fill="var(--accent-green)"/>
                     </svg>
                 </div>
                 <div class="project-content">
-                    <h3 data-i18n="proj.l2.title">Building Height Detection using AI</h3>
-                    <p>Machine learning system for automated building height estimation using MATLAB and Python. Designed feature extraction pipelines, real-time data visualization workflows, and end-to-end ML pipeline for architectural and urban planning scenarios.</p>
+                    <h3><a href="https://github.com/Sohamkarpe/building_height_detection" target="_blank" style="color:inherit;text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='var(--accent-green)'" onmouseout="this.style.color='inherit'" data-i18n="proj.l2.title">Building Height Detection using AI</a></h3>
+                    <p data-i18n="proj.l2.desc">Machine learning system for automated building height estimation using MATLAB and Python. Feature extraction pipelines with HOG, LBP, shadow analysis and regression models for architectural and urban planning scenarios.</p>
                     <div class="project-tech">
-                        <span>MATLAB</span><span>Python</span><span>ML</span><span>Feature Extraction</span>
+                        <span>MATLAB</span><span>Python</span><span>scikit-learn</span><span>OpenCV</span><span>Feature Extraction</span>
                     </div>
                     <div class="project-footer">
-                        <span class="project-link college-link">Mar 2023 – Jul 2023 | DIT HiWi</span>
+                        <a href="https://github.com/Sohamkarpe/building_height_detection" target="_blank" class="project-link college-link" style="color:var(--accent-green)">
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            View on GitHub →
+                        </a>
+                        <span style="font-size:0.75rem;color:var(--text-muted)">Mar 2023 – Jul 2023 | DIT</span>
                     </div>
                 </div>
             </div>
 
+            <!-- SCARA Robot -->
             <div class="project-card college fade-in" data-category="college">
                 <div class="project-image" style="background:linear-gradient(135deg,#0f3460 0%,#1a1a2e 100%)">
                     <div class="project-status-badge status-college" data-i18n="proj.status.college">🎓 College Lab</div>
@@ -828,7 +840,7 @@
                 </div>
                 <div class="project-content">
                     <h3 data-i18n="proj.l3.title">Pick-and-Place SCARA Robot Simulation</h3>
-                    <p>Fully simulated industrial SCARA robot in Gazebo using ROS. Implemented complete forward/inverse kinematics, motion planning, and control algorithms for precise object manipulation in factory automation scenarios.</p>
+                    <p data-i18n="proj.l3.desc">Fully simulated industrial SCARA robot in Gazebo using ROS. Implemented complete forward/inverse kinematics, motion planning, and control algorithms for precise object manipulation in factory automation scenarios.</p>
                     <div class="project-tech">
                         <span>ROS</span><span>Gazebo</span><span>Python</span><span>Kinematics</span><span>Motion Planning</span>
                     </div>
@@ -837,6 +849,7 @@
                     </div>
                 </div>
             </div>
+
         </div></div></div>
         <div class="carousel-controls">
             <button class="carousel-btn" onclick="carouselPrev(this)">&#8592;</button>
@@ -978,10 +991,10 @@ const T = {
         'skills.cat7':'Languages','skills.cat8':'Soft Skills',
         'proj.title':'Projects','proj.sub':'Company work · College lab',
         'tab.all':'All Projects','tab.public':'🟢 Public / GitHub','tab.company':'🔒 Company Work',
-        'tab.college':'🎓 College Lab','tab.intern':'🔧 Internship / Thesis',
+        'tab.college':'🟢 Open Source',
         'group.public':'Public GitHub Projects','group.public.badge':'🟢 Open Source',
         'group.company':'Company Work','group.company.badge':'🔒 Company IP — Not Shareable',
-        'group.college':'College Lab Projects','group.college.badge':'🎓 Deggendorf Institute of Technology',
+        'group.college':'Open Source — GitHub Projects','group.college.badge':'🟢 Public on GitHub',
         'group.intern':'Internship & Bachelor Thesis','group.intern.badge':'🔧 Engineering Work — India',
         'proj.p1.title':'YOLOv8 Surface Defect Detection',
         'proj.p1.desc':"Real-time industrial defect detection pipeline using YOLOv8m with two-stage transfer learning. Trained on MVTec AD public dataset — achieving production-grade accuracy with two-stage transfer learning on industrial surface images.",
@@ -1087,10 +1100,10 @@ const T = {
         'skills.cat7':'Sprachen','skills.cat8':'Soft Skills',
         'proj.title':'Projekte','proj.sub':'Unternehmensarbeit · Hochschulprojekte',
         'tab.all':'Alle Projekte','tab.public':'🟢 Öffentlich / GitHub','tab.company':'🔒 Unternehmensarbeit',
-        'tab.college':'🎓 Hochschulprojekte','tab.intern':'🔧 Praktikum / Abschlussarbeit',
+        'tab.college':'🟢 Open Source',
         'group.public':'Öffentliche GitHub-Projekte','group.public.badge':'🟢 Open Source',
         'group.company':'Unternehmensarbeit','group.company.badge':'🔒 Firmen-IP — Nicht teilbar',
-        'group.college':'Hochschulprojekte','group.college.badge':'🎓 Technische Hochschule Deggendorf',
+        'group.college':'Open Source — GitHub Projekte','group.college.badge':'🟢 Öffentlich auf GitHub',
         'group.intern':'Praktikum & Bachelorarbeit','group.intern.badge':'🔧 Ingenieursarbeit — Indien',
         'proj.p1.title':'YOLOv8 Oberflächenfehler-Erkennung',
         'proj.p1.desc':'Echtzeit-Pipeline zur industriellen Fehlererkennung mit YOLOv8m und zweistufigem Transfer-Learning. Trainiert auf dem öffentlichen MVTec-AD-Datensatz — produktionsreife Genauigkeit. Spiegelt den Ansatz meiner Masterarbeit wider (89,3% mAP@0.5).',
@@ -1172,7 +1185,7 @@ document.querySelectorAll('.nav-center a').forEach(link => {
 
 // Project filter tabs
 // ── PROJECT FILTER + CAROUSEL ────────────────────────────────
-const SLIDE_INTERVAL = 6000;
+const SLIDE_INTERVAL = 8000;
 const carousels = new Map(); // group element -> carousel state
 
 function initCarousel(groupEl) {
