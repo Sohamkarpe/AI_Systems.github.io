@@ -641,26 +641,26 @@
         </div>
         <div class="carousel-wrapper"><div class="carousel-track">
 
-            <div class="project-card locked fade-in" data-category="company">
+            <div class="project-card fade-in" data-category="company">
                 <div class="project-image" style="background:linear-gradient(135deg,#1a1200 0%,#2e1a00 100%)">
-                    <div class="project-status-badge status-locked" data-i18n="proj.status.locked">🔒 Confidential</div>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="1.5">
+                    <div class="project-status-badge status-new">🏆 Master Thesis</div>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5">
                         <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0-6v6m18-6v6"/>
                         <circle cx="12" cy="12" r="3"/>
                     </svg>
                 </div>
                 <div class="project-content">
-                    <h3 data-i18n="proj.c1.title">Real-Time AI Visual Inspection System</h3>
+                    <h3><a href="https://github.com/Sohamkarpe/inspection_system" target="_blank" style="color:inherit;text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='var(--accent-cyan)'" onmouseout="this.style.color='inherit'" data-i18n="proj.c1.title">Design and Development of a Real-Time AI-Based Visual Inspection System for Industrial Components</a></h3>
                     <div style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.25rem 0.6rem;background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.4);border-radius:20px;font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:#ffd700;margin-bottom:0.5rem">🏆 Master Thesis — Best Thesis Nominated</div>
                     <p>Master's thesis project (Nominated for Best Thesis Award). Complete AI-based visual inspection system deployed at mech-tron GmbH — YOLOv8m (89.3% mAP@0.5), PyQt5 HMI, 5-axis hardware, operator-driven training pipeline, 6 deployed model versions.</p>
                     <div class="project-tech">
                         <span>YOLOv8m</span><span>PyQt5</span><span>C++</span><span>OpenCV</span><span>Arduino</span>
                     </div>
                     <div class="project-footer">
-                        <div class="lock-tooltip">
-                            <span class="project-link locked-link" data-i18n="proj.locked">🔒 Company IP — Cannot Share</span>
-                            <span class="tooltip-text">Code developed at mech-tron GmbH. See public demo version on GitHub instead.</span>
-                        </div>
+                        <a href="https://github.com/Sohamkarpe/inspection_system" target="_blank" class="project-link">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            View on GitHub →
+                        </a>
                     </div>
                 </div>
             </div>
@@ -992,7 +992,7 @@ const T = {
         'proj.p3.title':'Camera Hardware Interface & Calibration',
         'proj.p3.desc':'Python-based industrial camera integration library with hardware abstraction. Supports USB3 Vision cameras, full camera calibration (intrinsic/extrinsic), distortion correction, pixel-to-mm conversion, and multi-camera synchronization.',
         'proj.p3.link':'View on GitHub →',
-        'proj.c1.title':'Real-Time AI Visual Inspection System',
+        'proj.c1.title':'Design and Development of a Real-Time AI-Based Visual Inspection System for Industrial Components',
         'proj.c1.desc':"Master's thesis project (Nominated for Best Thesis Award). Complete AI-based visual inspection system deployed at mech-tron GmbH — YOLOv8m (89.3% mAP@0.5), PyQt5 HMI, 5-axis hardware, operator-driven training pipeline, 6 deployed model versions.",
         'proj.c2.title':'HMI-Integrated Annotation & Training Tool',
         'proj.c2.desc':'Qt-based integrated annotation module built directly inside the inspection HMI — operators draw bounding boxes, label defect classes, and export datasets without leaving the system. Eliminates LabelImg/Roboflow dependency entirely.',
@@ -1101,7 +1101,7 @@ const T = {
         'proj.p3.title':'Kamera-Hardware-Schnittstelle & Kalibrierung',
         'proj.p3.desc':'Python-basierte Industriekamera-Integrationsbibliothek mit Hardware-Abstraktion. Unterstützt USB3-Vision-Kameras, vollständige Kamerakalibrierung, Verzerrungskorrektur, Pixel-zu-mm-Umrechnung und Multi-Kamera-Synchronisation.',
         'proj.p3.link':'Auf GitHub ansehen →',
-        'proj.c1.title':'Echtzeit-KI-Bildverarbeitungssystem',
+        'proj.c1.title':'Entwicklung und Implementierung eines KI-basierten Echtzeit-Systems zur visuellen Inspektion von industriellen Komponenten',
         'proj.c1.desc':'Masterarbeit (Nominiert für Best Thesis Award). Vollständiges KI-basiertes Bildverarbeitungssystem bei mech-tron GmbH — YOLOv8m (89,3% mAP@0.5), PyQt5-HMI, 5-Achsen-Hardware, bedienergesteuerte Trainingspipeline, 6 Modellversionen.',
         'proj.c2.title':'HMI-Integriertes Annotierungs- und Trainingswerkzeug',
         'proj.c2.desc':'Qt-basiertes Annotierungsmodul direkt im Inspektions-HMI — Bediener zeichnen Begrenzungsrahmen, beschriften Fehlerklassen und exportieren Datensätze ohne das System zu verlassen. Eliminiert LabelImg/Roboflow vollständig.',
@@ -1172,7 +1172,7 @@ document.querySelectorAll('.nav-center a').forEach(link => {
 
 // Project filter tabs
 // ── PROJECT FILTER + CAROUSEL ────────────────────────────────
-const SLIDE_INTERVAL = 3000;
+const SLIDE_INTERVAL = 6000;
 const carousels = new Map(); // group element -> carousel state
 
 function initCarousel(groupEl) {
