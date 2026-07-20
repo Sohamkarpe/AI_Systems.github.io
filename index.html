@@ -641,118 +641,59 @@
         </div>
 
         <!-- 3-COLUMN LAYOUT: [Static Card 1] [Static Card 2] [Mini Carousel] -->
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;align-items:start">
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;align-items:stretch">
 
-            <!-- CARD 1: Master Thesis (static, smaller) -->
-            <div class="project-card fade-in" data-category="company" style="font-size:0.92em">
-                <div class="project-image" style="background:linear-gradient(135deg,#1a1200 0%,#2e1a00 100%);height:160px">
-                    <a href="https://github.com/Sohamkarpe/inspection_system" target="_blank" style="position:absolute;top:10px;left:10px;display:inline-flex;align-items:center;gap:0.3rem;padding:0.15rem 0.45rem;background:rgba(0,0,0,0.6);border:1px solid rgba(0,255,136,0.4);border-radius:20px;font-family:monospace;font-size:0.58rem;color:var(--accent-green);text-decoration:none;z-index:2" onmouseover="this.style.background='rgba(0,255,136,0.15)'" onmouseout="this.style.background='rgba(0,0,0,0.6)'">
-                        <svg viewBox="0 0 24 24" width="9" height="9" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    <div class="project-status-badge status-new" style="top:10px;right:10px;font-size:0.6rem">🏆 Master Thesis</div>
-                    <a href="https://drive.google.com/file/d/1bs8e6Jfgd6mDgSlNenit2KbFWGmXs2h6/view" target="_blank" style="position:absolute;bottom:10px;right:10px;display:inline-flex;align-items:center;gap:0.3rem;padding:0.15rem 0.45rem;background:rgba(0,255,136,0.2);border:1px solid rgba(0,255,136,0.4);border-radius:20px;font-family:monospace;font-size:0.58rem;color:var(--accent-green);text-decoration:none;z-index:2">▶ Demo Video</a>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5" style="width:40px;height:40px">
-                        <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0-6v6m18-6v6"/>
-                        <circle cx="12" cy="12" r="3"/>
-                    </svg>
-                </div>
-                <div class="project-content" style="padding:1rem">
-                    <h3 style="font-size:0.85rem;margin-bottom:0.4rem"><a href="https://github.com/Sohamkarpe/inspection_system" target="_blank" style="color:inherit;text-decoration:none" onmouseover="this.style.color='var(--accent-cyan)'" onmouseout="this.style.color='inherit'" data-i18n="proj.c1.title">Design and Development of a Real-Time AI-Based Visual Inspection System for Industrial Components</a></h3>
-                    <div style="margin-bottom:0.4rem"><div style="display:inline-flex;padding:0.2rem 0.5rem;background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.4);border-radius:20px;font-size:0.62rem;color:#ffd700">🏆 Best Thesis Nominated</div></div>
-                    <p style="font-size:0.78rem;line-height:1.5">YOLOv8m (89.3% mAP@0.5), PyQt5 HMI, 5-axis hardware, operator-driven training pipeline, 6 deployed model versions.</p>
-                    <div class="project-tech" style="font-size:0.7rem"><span>YOLOv8m</span><span>PyQt5</span><span>C++</span><span>OpenCV</span></div>
-                    <div class="project-footer"><span style="font-size:0.72rem;color:var(--text-muted)">mech-tron GmbH & Co. KG, Roding</span></div>
-                </div>
-            </div>
-
-            <!-- CARD 2: HMI Tool (static, smaller) -->
-            <div class="project-card locked fade-in" data-category="company" style="font-size:0.92em">
-                <div class="project-image" style="background:linear-gradient(135deg,#1a0a00 0%,#2e1000 100%);height:160px">
-                    <div class="project-status-badge status-locked" style="top:10px;right:10px;font-size:0.6rem" data-i18n="proj.status.locked">🔒 Confidential</div>
-                    <a href="https://drive.google.com/file/d/1ooHNbs1zE3ZjZ1eUcE0p6kZCZcEEESgW/view" target="_blank" style="position:absolute;bottom:10px;right:10px;display:inline-flex;align-items:center;gap:0.3rem;padding:0.15rem 0.45rem;background:rgba(0,255,136,0.2);border:1px solid rgba(0,255,136,0.4);border-radius:20px;font-family:monospace;font-size:0.58rem;color:var(--accent-green);text-decoration:none;z-index:2">▶ Demo Video</a>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="1.5" style="width:40px;height:40px">
-                        <circle cx="12" cy="8" r="4"/><path d="M12 8v-2m0 6v-2m-3-1H7m8 0h-2"/><path d="M5 20v-1a7 7 0 0114 0v1"/>
-                    </svg>
-                </div>
-                <div class="project-content" style="padding:1rem">
-                    <h3 style="font-size:0.85rem;margin-bottom:0.4rem">HMI-Integrated Annotation & Training Tool</h3>
-                    <p style="font-size:0.78rem;line-height:1.5">Qt-based annotation module built inside the inspection HMI — operators label defects and export datasets directly on the production line.</p>
-                    <div class="project-tech" style="font-size:0.7rem"><span>Qt/C++</span><span>Python</span><span>OpenCV</span><span>YOLOv8</span></div>
-                    <div class="project-footer">
-                        <div class="lock-tooltip"><span class="project-link locked-link" style="font-size:0.72rem" data-i18n="proj.locked">🔒 Company IP</span><span class="tooltip-text">Developed at mech-tron GmbH.</span></div>
-                        <span style="font-size:0.72rem;color:var(--text-muted)">mech-tron GmbH & Co. KG</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- MINI CAROUSEL: Cards 3→4→5 loop -->
-            <div class="mini-carousel" id="companyMiniCarousel" style="position:relative;overflow:hidden;border-radius:var(--radius-lg)">
-                <div class="mini-carousel-inner" style="display:flex;transition:transform 0.5s ease">
-
-                <div class="project-image" style="background:linear-gradient(135deg,#1a1200 0%,#2e1a00 100%);height:200px">
-                    <a href="https://github.com/Sohamkarpe/inspection_system" target="_blank" style="position:absolute;top:12px;left:12px;display:inline-flex;align-items:center;gap:0.3rem;padding:0.2rem 0.5rem;background:rgba(0,0,0,0.6);border:1px solid rgba(0,255,136,0.4);border-radius:20px;font-family:monospace;font-size:0.60rem;color:var(--accent-green);text-decoration:none;z-index:2" onmouseover="this.style.background='rgba(0,255,136,0.15)'" onmouseout="this.style.background='rgba(0,0,0,0.6)'">
+            <!-- CARD 1: Master Thesis (static) -->
+            <div class="project-card fade-in" data-category="company">
+                <div class="project-image" style="background:linear-gradient(135deg,#1a1200 0%,#2e1a00 100%)">
+                    <a href="https://github.com/Sohamkarpe/inspection_system" target="_blank" style="position:absolute;top:10px;left:10px;display:inline-flex;align-items:center;gap:0.3rem;padding:0.2rem 0.5rem;background:rgba(0,0,0,0.6);border:1px solid rgba(0,255,136,0.4);border-radius:20px;font-family:monospace;font-size:0.60rem;color:var(--accent-green);text-decoration:none;z-index:2" onmouseover="this.style.background='rgba(0,255,136,0.15)'" onmouseout="this.style.background='rgba(0,0,0,0.6)'">
                         <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                         GitHub
                     </a>
                     <div class="project-status-badge status-new" style="top:12px;right:12px">🏆 Master Thesis</div>
-                    <a href="https://drive.google.com/file/d/1bs8e6Jfgd6mDgSlNenit2KbFWGmXs2h6/view" target="_blank" style="position:absolute;bottom:12px;right:12px;display:inline-flex;align-items:center;gap:0.3rem;padding:0.2rem 0.5rem;background:rgba(0,255,136,0.2);border:1px solid rgba(0,255,136,0.4);border-radius:20px;font-family:monospace;font-size:0.60rem;color:var(--accent-green);text-decoration:none;z-index:2" onmouseover="this.style.background='rgba(0,255,136,0.35)'" onmouseout="this.style.background='rgba(0,255,136,0.2)'">▶ Demo Video</a>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5">
+                    <a href="https://drive.google.com/file/d/1bs8e6Jfgd6mDgSlNenit2KbFWGmXs2h6/view" target="_blank" style="position:absolute;bottom:10px;right:10px;display:inline-flex;align-items:center;gap:0.3rem;padding:0.2rem 0.5rem;background:rgba(0,255,136,0.2);border:1px solid rgba(0,255,136,0.4);border-radius:20px;font-family:monospace;font-size:0.58rem;color:var(--accent-green);text-decoration:none;z-index:2">▶ Demo Video</a>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5" style="width:40px;height:40px">
                         <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0-6v6m18-6v6"/>
                         <circle cx="12" cy="12" r="3"/>
                     </svg>
                 </div>
                 <div class="project-content">
                     <h3><a href="https://github.com/Sohamkarpe/inspection_system" target="_blank" style="color:inherit;text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='var(--accent-cyan)'" onmouseout="this.style.color='inherit'" data-i18n="proj.c1.title">Design and Development of a Real-Time AI-Based Visual Inspection System for Industrial Components</a></h3>
-                    <div style="margin-bottom:0.6rem">
-                        <div style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.25rem 0.6rem;background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.4);border-radius:20px;font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:#ffd700">🏆 Master Thesis — Best Thesis Nominated</div>
-                    </div>
-                    <p>Master's thesis project (Nominated for Best Thesis Award). Complete AI-based visual inspection system deployed at mech-tron GmbH — YOLOv8m (89.3% mAP@0.5), PyQt5 HMI, 5-axis hardware, operator-driven training pipeline, 6 deployed model versions.</p>
-                    <div class="project-tech">
-                        <span>YOLOv8m</span><span>PyQt5</span><span>C++</span><span>OpenCV</span><span>Arduino</span>
-                    </div>
-                    <div class="project-footer">
-                        <span style="font-size:0.75rem;color:var(--text-muted)">mech-tron GmbH & Co. KG, Roding</span>
-                    </div>
+                    <div style="margin-bottom:0.6rem"><div style="display:inline-flex;padding:0.25rem 0.6rem;background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.4);border-radius:20px;font-size:0.68rem;color:#ffd700">🏆 Best Thesis Nominated</div></div>
+                    <p>YOLOv8m (89.3% mAP@0.5), PyQt5 HMI, 5-axis hardware, operator-driven training pipeline, 6 deployed model versions.</p>
+                    <div class="project-tech"><span>YOLOv8m</span><span>PyQt5</span><span>C++</span><span>OpenCV</span></div>
+                    <div class="project-footer"><span style="font-size:0.75rem;color:var(--text-muted)">mech-tron GmbH & Co. KG, Roding</span></div>
                 </div>
             </div>
 
+            <!-- CARD 2: HMI Tool (static) -->
             <div class="project-card locked fade-in" data-category="company">
                 <div class="project-image" style="background:linear-gradient(135deg,#1a0a00 0%,#2e1000 100%)">
                     <div class="project-status-badge status-locked" style="top:12px;right:12px" data-i18n="proj.status.locked">🔒 Confidential</div>
-                    <a href="https://drive.google.com/file/d/1ooHNbs1zE3ZjZ1eUcE0p6kZCZcEEESgW/view" target="_blank" style="position:absolute;bottom:12px;right:12px;display:inline-flex;align-items:center;gap:0.3rem;padding:0.2rem 0.5rem;background:rgba(0,255,136,0.2);border:1px solid rgba(0,255,136,0.4);border-radius:20px;font-family:monospace;font-size:0.60rem;color:var(--accent-green);text-decoration:none;z-index:2" onmouseover="this.style.background='rgba(0,255,136,0.35)'" onmouseout="this.style.background='rgba(0,255,136,0.2)'">▶ Demo Video</a>
+                    <a href="https://drive.google.com/file/d/1ooHNbs1zE3ZjZ1eUcE0p6kZCZcEEESgW/view" target="_blank" style="position:absolute;bottom:12px;right:12px;display:inline-flex;align-items:center;gap:0.3rem;padding:0.2rem 0.5rem;background:rgba(0,255,136,0.2);border:1px solid rgba(0,255,136,0.4);border-radius:20px;font-family:monospace;font-size:0.60rem;color:var(--accent-green);text-decoration:none;z-index:2">▶ Demo Video</a>
                     <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="1.5">
-                        <circle cx="12" cy="8" r="4"/>
-                        <path d="M12 8v-2m0 6v-2m-3-1H7m8 0h-2"/>
-                        <path d="M5 20v-1a7 7 0 0114 0v1"/>
+                        <circle cx="12" cy="8" r="4"/><path d="M12 8v-2m0 6v-2m-3-1H7m8 0h-2"/><path d="M5 20v-1a7 7 0 0114 0v1"/>
                     </svg>
                 </div>
                 <div class="project-content">
                     <h3>HMI-Integrated Annotation & Training Tool</h3>
-                    <p>Qt-based integrated annotation module built directly inside the inspection HMI — operators draw bounding boxes, label defect classes, and export datasets without leaving the system. Eliminates LabelImg/Roboflow dependency entirely.</p>
-                    <div class="project-tech">
-                        <span>Qt/C++</span><span>Python</span><span>OpenCV</span><span>YOLOv8</span><span>HMI</span>
-                    </div>
+                    <p>Qt-based annotation module built inside the inspection HMI — operators label defects and export datasets directly on the production line.</p>
+                    <div class="project-tech"><span>Qt/C++</span><span>Python</span><span>OpenCV</span><span>YOLOv8</span></div>
                     <div class="project-footer">
-                        <div class="lock-tooltip">
-                            <span class="project-link locked-link" data-i18n="proj.locked">🔒 Company IP — Cannot Share</span>
-                            <span class="tooltip-text">Developed at mech-tron GmbH production environment.</span>
-                        </div>
-                        <span style="font-size:0.72rem;color:var(--text-muted)">mech-tron GmbH & Co. KG</span>
+                        <div class="lock-tooltip"><span class="project-link locked-link" data-i18n="proj.locked">🔒 Company IP</span><span class="tooltip-text">Developed at mech-tron GmbH.</span></div>
+                        <span style="font-size:0.75rem;color:var(--text-muted)">mech-tron GmbH & Co. KG</span>
                     </div>
                 </div>
             </div>
 
-        </div><!-- end static grid -->
-
-        <!-- MINI CAROUSEL: Cards 3→4→5 loop with hover pause -->
-        <div class="mini-carousel" id="companyMiniCarousel" style="position:relative;overflow:hidden;border-radius:var(--radius-lg);margin-top:0"
+            <!-- MINI CAROUSEL: Cards 3→4→5 loop with hover pause -->
+            <div class="mini-carousel" id="companyMiniCarousel" style="position:relative;overflow:hidden;border-radius:var(--radius-lg);height:100%"
             onmouseenter="pauseMiniCarousel()" onmouseleave="resumeMiniCarousel()">
-            <div class="mini-carousel-inner" id="miniCarouselInner" style="display:flex;transition:transform 0.5s ease;will-change:transform">
+            <div class="mini-carousel-inner" id="miniCarouselInner" style="display:flex;transition:transform 0.5s ease;will-change:transform;height:100%">
 
                 <!-- Card 3 -->
-                <div style="min-width:100%;box-sizing:border-box">
-                    <div class="project-card locked" data-category="company" style="margin:0">
+                <div style="min-width:100%;box-sizing:border-box;height:100%">
+                    <div class="project-card locked" data-category="company" style="margin:0;height:100%;box-sizing:border-box">
                         <div class="project-image" style="background:linear-gradient(135deg,#1a1000 0%,#1a0a1a 100%)">
                             <div class="project-status-badge status-locked" data-i18n="proj.status.locked">🔒 Confidential</div>
                             <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="1.5">
@@ -772,8 +713,8 @@
                 </div>
 
                 <!-- Card 4 -->
-                <div style="min-width:100%;box-sizing:border-box">
-                    <div class="project-card locked" data-category="company" style="margin:0">
+                <div style="min-width:100%;box-sizing:border-box;height:100%">
+                    <div class="project-card locked" data-category="company" style="margin:0;height:100%;box-sizing:border-box">
                         <div class="project-image" style="background:linear-gradient(135deg,#150a1a 0%,#1a0012 100%)">
                             <div class="project-status-badge status-locked" data-i18n="proj.status.locked">🔒 Confidential</div>
                             <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-magenta)" stroke-width="1.5">
@@ -793,8 +734,8 @@
                 </div>
 
                 <!-- Card 5 -->
-                <div style="min-width:100%;box-sizing:border-box">
-                    <div class="project-card locked" data-category="company" style="margin:0">
+                <div style="min-width:100%;box-sizing:border-box;height:100%">
+                    <div class="project-card locked" data-category="company" style="margin:0;height:100%;box-sizing:border-box">
                         <div class="project-image" style="background:linear-gradient(135deg,#0a1020 0%,#0f1a30 100%)">
                             <div class="project-status-badge status-locked" data-i18n="proj.status.locked">🔒 Confidential</div>
                             <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="1.5">
@@ -870,7 +811,7 @@
             <span class="group-badge badge-college" style="background:rgba(0,255,136,0.15);color:var(--accent-green);border:1px solid rgba(0,255,136,0.3)">🟢 Public on GitHub</span>
             <div class="group-line"></div>
         </div>
-        <div class="projects-grid" style="margin-top:1.5rem">
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;align-items:stretch;margin-top:1.5rem">
 
             <!-- Liveness Detection -->
             <div class="project-card college fade-in" data-category="college">
@@ -934,9 +875,9 @@
                 </div>
                 <div class="project-content">
                     <h3 data-i18n="proj.l3.title">Pick-and-Place SCARA Robot Simulation</h3>
-                    <p data-i18n="proj.l3.desc">Fully simulated industrial SCARA robot in Gazebo using ROS. Implemented complete forward/inverse kinematics, motion planning, and control algorithms for precise object manipulation in factory automation scenarios.</p>
+                    <p data-i18n="proj.l3.desc">Fully simulated industrial SCARA robot in Gazebo using ROS on Linux. Implemented complete forward/inverse kinematics, motion planning, and control algorithms for precise object manipulation in factory automation scenarios.</p>
                     <div class="project-tech">
-                        <span>ROS</span><span>Gazebo</span><span>Python</span><span>Kinematics</span><span>Motion Planning</span>
+                        <span>ROS</span><span>Gazebo</span><span>Python</span><span>Linux</span><span>Kinematics</span><span>Motion Planning</span>
                     </div>
                     <div class="project-footer">
                         <div class="lock-tooltip">
