@@ -639,10 +639,57 @@
             <span class="group-badge badge-company" data-i18n="group.company.badge">🔒 Company IP — Not Shareable</span>
             <div class="group-line"></div>
         </div>
-        <!-- STATIC: First 2 cards always visible -->
-        <div class="projects-grid" style="margin-bottom:1.5rem">
 
-            <div class="project-card fade-in" data-category="company">
+        <!-- 3-COLUMN LAYOUT: [Static Card 1] [Static Card 2] [Mini Carousel] -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;align-items:start">
+
+            <!-- CARD 1: Master Thesis (static, smaller) -->
+            <div class="project-card fade-in" data-category="company" style="font-size:0.92em">
+                <div class="project-image" style="background:linear-gradient(135deg,#1a1200 0%,#2e1a00 100%);height:160px">
+                    <a href="https://github.com/Sohamkarpe/inspection_system" target="_blank" style="position:absolute;top:10px;left:10px;display:inline-flex;align-items:center;gap:0.3rem;padding:0.15rem 0.45rem;background:rgba(0,0,0,0.6);border:1px solid rgba(0,255,136,0.4);border-radius:20px;font-family:monospace;font-size:0.58rem;color:var(--accent-green);text-decoration:none;z-index:2" onmouseover="this.style.background='rgba(0,255,136,0.15)'" onmouseout="this.style.background='rgba(0,0,0,0.6)'">
+                        <svg viewBox="0 0 24 24" width="9" height="9" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        GitHub
+                    </a>
+                    <div class="project-status-badge status-new" style="top:10px;right:10px;font-size:0.6rem">🏆 Master Thesis</div>
+                    <a href="https://drive.google.com/file/d/1bs8e6Jfgd6mDgSlNenit2KbFWGmXs2h6/view" target="_blank" style="position:absolute;bottom:10px;right:10px;display:inline-flex;align-items:center;gap:0.3rem;padding:0.15rem 0.45rem;background:rgba(0,255,136,0.2);border:1px solid rgba(0,255,136,0.4);border-radius:20px;font-family:monospace;font-size:0.58rem;color:var(--accent-green);text-decoration:none;z-index:2">▶ Demo Video</a>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5" style="width:40px;height:40px">
+                        <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0-6v6m18-6v6"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                </div>
+                <div class="project-content" style="padding:1rem">
+                    <h3 style="font-size:0.85rem;margin-bottom:0.4rem"><a href="https://github.com/Sohamkarpe/inspection_system" target="_blank" style="color:inherit;text-decoration:none" onmouseover="this.style.color='var(--accent-cyan)'" onmouseout="this.style.color='inherit'" data-i18n="proj.c1.title">Design and Development of a Real-Time AI-Based Visual Inspection System for Industrial Components</a></h3>
+                    <div style="margin-bottom:0.4rem"><div style="display:inline-flex;padding:0.2rem 0.5rem;background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.4);border-radius:20px;font-size:0.62rem;color:#ffd700">🏆 Best Thesis Nominated</div></div>
+                    <p style="font-size:0.78rem;line-height:1.5">YOLOv8m (89.3% mAP@0.5), PyQt5 HMI, 5-axis hardware, operator-driven training pipeline, 6 deployed model versions.</p>
+                    <div class="project-tech" style="font-size:0.7rem"><span>YOLOv8m</span><span>PyQt5</span><span>C++</span><span>OpenCV</span></div>
+                    <div class="project-footer"><span style="font-size:0.72rem;color:var(--text-muted)">mech-tron GmbH & Co. KG, Roding</span></div>
+                </div>
+            </div>
+
+            <!-- CARD 2: HMI Tool (static, smaller) -->
+            <div class="project-card locked fade-in" data-category="company" style="font-size:0.92em">
+                <div class="project-image" style="background:linear-gradient(135deg,#1a0a00 0%,#2e1000 100%);height:160px">
+                    <div class="project-status-badge status-locked" style="top:10px;right:10px;font-size:0.6rem" data-i18n="proj.status.locked">🔒 Confidential</div>
+                    <a href="https://drive.google.com/file/d/1ooHNbs1zE3ZjZ1eUcE0p6kZCZcEEESgW/view" target="_blank" style="position:absolute;bottom:10px;right:10px;display:inline-flex;align-items:center;gap:0.3rem;padding:0.15rem 0.45rem;background:rgba(0,255,136,0.2);border:1px solid rgba(0,255,136,0.4);border-radius:20px;font-family:monospace;font-size:0.58rem;color:var(--accent-green);text-decoration:none;z-index:2">▶ Demo Video</a>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="1.5" style="width:40px;height:40px">
+                        <circle cx="12" cy="8" r="4"/><path d="M12 8v-2m0 6v-2m-3-1H7m8 0h-2"/><path d="M5 20v-1a7 7 0 0114 0v1"/>
+                    </svg>
+                </div>
+                <div class="project-content" style="padding:1rem">
+                    <h3 style="font-size:0.85rem;margin-bottom:0.4rem">HMI-Integrated Annotation & Training Tool</h3>
+                    <p style="font-size:0.78rem;line-height:1.5">Qt-based annotation module built inside the inspection HMI — operators label defects and export datasets directly on the production line.</p>
+                    <div class="project-tech" style="font-size:0.7rem"><span>Qt/C++</span><span>Python</span><span>OpenCV</span><span>YOLOv8</span></div>
+                    <div class="project-footer">
+                        <div class="lock-tooltip"><span class="project-link locked-link" style="font-size:0.72rem" data-i18n="proj.locked">🔒 Company IP</span><span class="tooltip-text">Developed at mech-tron GmbH.</span></div>
+                        <span style="font-size:0.72rem;color:var(--text-muted)">mech-tron GmbH & Co. KG</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MINI CAROUSEL: Cards 3→4→5 loop -->
+            <div class="mini-carousel" id="companyMiniCarousel" style="position:relative;overflow:hidden;border-radius:var(--radius-lg)">
+                <div class="mini-carousel-inner" style="display:flex;transition:transform 0.5s ease">
+
                 <div class="project-image" style="background:linear-gradient(135deg,#1a1200 0%,#2e1a00 100%);height:200px">
                     <a href="https://github.com/Sohamkarpe/inspection_system" target="_blank" style="position:absolute;top:12px;left:12px;display:inline-flex;align-items:center;gap:0.3rem;padding:0.2rem 0.5rem;background:rgba(0,0,0,0.6);border:1px solid rgba(0,255,136,0.4);border-radius:20px;font-family:monospace;font-size:0.60rem;color:var(--accent-green);text-decoration:none;z-index:2" onmouseover="this.style.background='rgba(0,255,136,0.15)'" onmouseout="this.style.background='rgba(0,0,0,0.6)'">
                         <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
@@ -691,91 +738,127 @@
                             <span class="project-link locked-link" data-i18n="proj.locked">🔒 Company IP — Cannot Share</span>
                             <span class="tooltip-text">Developed at mech-tron GmbH production environment.</span>
                         </div>
+                        <span style="font-size:0.72rem;color:var(--text-muted)">mech-tron GmbH & Co. KG</span>
                     </div>
                 </div>
             </div>
 
         </div><!-- end static grid -->
 
-        <!-- CAROUSEL: 3rd card onwards — faster speed -->
-        <div class="carousel-wrapper"><div class="carousel-track" data-interval="4000">
+        <!-- MINI CAROUSEL: Cards 3→4→5 loop with hover pause -->
+        <div class="mini-carousel" id="companyMiniCarousel" style="position:relative;overflow:hidden;border-radius:var(--radius-lg);margin-top:0"
+            onmouseenter="pauseMiniCarousel()" onmouseleave="resumeMiniCarousel()">
+            <div class="mini-carousel-inner" id="miniCarouselInner" style="display:flex;transition:transform 0.5s ease;will-change:transform">
 
-            <div class="project-card locked fade-in" data-category="company">
-                <div class="project-image" style="background:linear-gradient(135deg,#1a1000 0%,#1a0a1a 100%)">
-                    <div class="project-status-badge status-locked" data-i18n="proj.status.locked">🔒 Confidential</div>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="1.5">
-                        <circle cx="12" cy="12" r="9"/>
-                        <path d="M12 3v3M12 18v3M3 12h3M18 12h3"/>
-                        <circle cx="12" cy="12" r="3"/>
-                    </svg>
-                </div>
-                <div class="project-content">
-                    <h3 data-i18n="proj.c3.title">Automated Rotary Inspection System</h3>
-                    <p>Motorized circular turntable and movable camera mount controlled via Qt HMI and Arduino Mega. Enables full 360° automated product inspection with precise stepper motor control and real-time serial communication.</p>
-                    <div class="project-tech">
-                        <span>Arduino Mega</span><span>Qt</span><span>C++</span><span>PySerial</span><span>Motor Control</span>
-                    </div>
-                    <div class="project-footer">
-                        <div class="lock-tooltip">
-                            <span class="project-link locked-link" data-i18n="proj.locked">🔒 Company IP — Cannot Share</span>
-                            <span class="tooltip-text">Developed at mech-tron GmbH production line.</span>
+                <!-- Card 3 -->
+                <div style="min-width:100%;box-sizing:border-box">
+                    <div class="project-card locked" data-category="company" style="margin:0">
+                        <div class="project-image" style="background:linear-gradient(135deg,#1a1000 0%,#1a0a1a 100%)">
+                            <div class="project-status-badge status-locked" data-i18n="proj.status.locked">🔒 Confidential</div>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="9"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="project-content">
+                            <h3 data-i18n="proj.c3.title">Automated Rotary Inspection System</h3>
+                            <p>Motorized circular turntable and movable camera mount controlled via Qt HMI and Arduino Mega. Enables full 360° automated product inspection with precise stepper motor control and real-time serial communication.</p>
+                            <div class="project-tech"><span>Arduino Mega</span><span>Qt</span><span>C++</span><span>PySerial</span><span>Motor Control</span></div>
+                            <div class="project-footer">
+                                <div class="lock-tooltip"><span class="project-link locked-link" data-i18n="proj.locked">🔒 Company IP</span><span class="tooltip-text">Developed at mech-tron GmbH.</span></div>
+                                <span style="font-size:0.72rem;color:var(--text-muted)">mech-tron GmbH & Co. KG</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Card 4 -->
+                <div style="min-width:100%;box-sizing:border-box">
+                    <div class="project-card locked" data-category="company" style="margin:0">
+                        <div class="project-image" style="background:linear-gradient(135deg,#150a1a 0%,#1a0012 100%)">
+                            <div class="project-status-badge status-locked" data-i18n="proj.status.locked">🔒 Confidential</div>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-magenta)" stroke-width="1.5">
+                                <circle cx="9" cy="7" r="4"/><circle cx="15" cy="7" r="4"/><path d="M2 20v-1a5 5 0 015-5h10a5 5 0 015 5v1"/>
+                            </svg>
+                        </div>
+                        <div class="project-content">
+                            <h3 data-i18n="proj.c4.title">Facial Recognition System</h3>
+                            <p>Facial recognition registration and authentication system integrating deep learning CV models with Python backend services and C++. Real-time face detection, feature extraction, and secure identity verification.</p>
+                            <div class="project-tech"><span>OpenCV</span><span>Deep Learning</span><span>Python</span><span>C++</span></div>
+                            <div class="project-footer">
+                                <div class="lock-tooltip"><span class="project-link locked-link" data-i18n="proj.locked">🔒 Company IP</span><span class="tooltip-text">Developed at mech-tron GmbH.</span></div>
+                                <span style="font-size:0.72rem;color:var(--text-muted)">mech-tron GmbH & Co. KG</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div style="min-width:100%;box-sizing:border-box">
+                    <div class="project-card locked" data-category="company" style="margin:0">
+                        <div class="project-image" style="background:linear-gradient(135deg,#0a1020 0%,#0f1a30 100%)">
+                            <div class="project-status-badge status-locked" data-i18n="proj.status.locked">🔒 Confidential</div>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="1.5">
+                                <path d="M9 12l2 2 4-4"/><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="project-content">
+                            <h3>Automated Testing & Multi-Camera Integration Framework</h3>
+                            <p>pytest-based automated testing framework for validating YOLOv8 models with CI/CD integration. Multiple industrial cameras synchronized for image capture with sensor fusion and spatial alignment.</p>
+                            <div class="project-tech"><span>pytest</span><span>YOLOv8</span><span>CI/CD</span><span>Multi-Camera</span><span>Sensor Fusion</span></div>
+                            <div class="project-footer">
+                                <div class="lock-tooltip"><span class="project-link locked-link" data-i18n="proj.locked">🔒 Company IP</span><span class="tooltip-text">Developed at mech-tron GmbH.</span></div>
+                                <span style="font-size:0.72rem;color:var(--text-muted)">mech-tron GmbH & Co. KG</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="project-card locked fade-in" data-category="company">
-                <div class="project-image" style="background:linear-gradient(135deg,#150a1a 0%,#1a0012 100%)">
-                    <div class="project-status-badge status-locked" data-i18n="proj.status.locked">🔒 Confidential</div>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-magenta)" stroke-width="1.5">
-                        <circle cx="9" cy="7" r="4"/>
-                        <circle cx="15" cy="7" r="4"/>
-                        <path d="M2 20v-1a5 5 0 015-5h10a5 5 0 015 5v1"/>
-                    </svg>
-                </div>
-                <div class="project-content">
-                    <h3 data-i18n="proj.c4.title">Facial Recognition System</h3>
-                    <p>Facial recognition registration and authentication system integrating deep learning CV models with Python backend services and C++. Real-time face detection, feature extraction, and secure identity verification.</p>
-                    <div class="project-tech">
-                        <span>OpenCV</span><span>Deep Learning</span><span>Python</span><span>C++</span>
-                    </div>
-                    <div class="project-footer">
-                        <div class="lock-tooltip">
-                            <span class="project-link locked-link" data-i18n="proj.locked">🔒 Company IP — Cannot Share</span>
-                            <span class="tooltip-text">Developed at mech-tron GmbH.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- Arrows -->
+            <button onclick="miniCarouselPrev()" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.6);border:1px solid var(--border-color);color:var(--text-primary);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;z-index:3">&#8592;</button>
+            <button onclick="miniCarouselNext()" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.6);border:1px solid var(--border-color);color:var(--text-primary);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;z-index:3">&#8594;</button>
 
-            <div class="project-card locked fade-in" data-category="company">
-                <div class="project-image" style="background:linear-gradient(135deg,#0a1020 0%,#0f1a30 100%)">
-                    <div class="project-status-badge status-locked" data-i18n="proj.status.locked">🔒 Confidential</div>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="1.5">
-                        <path d="M9 12l2 2 4-4"/><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        <rect x="14" y="3" width="7" height="5" rx="1"/><path d="M17 8v3M15 10h4"/>
-                    </svg>
-                </div>
-                <div class="project-content">
-                    <h3>Automated Testing & Multi-Camera Integration Framework</h3>
-                    <p>pytest-based automated testing framework for validating YOLOv8 models with CI/CD pipeline integration. Integrated multiple industrial cameras for synchronized image capture with sensor fusion and spatial alignment for 3D scene understanding.</p>
-                    <div class="project-tech">
-                        <span>pytest</span><span>YOLOv8</span><span>CI/CD</span><span>Multi-Camera</span><span>Sensor Fusion</span>
-                    </div>
-                    <div class="project-footer">
-                        <div class="lock-tooltip">
-                            <span class="project-link locked-link" data-i18n="proj.locked">🔒 Company IP — Cannot Share</span>
-                            <span class="tooltip-text">Developed at mech-tron GmbH. Oct 2024 – Feb 2025.</span>
-                        </div>
-                    </div>
-                </div>
-            </div></div></div>
-        <div class="carousel-controls">
-            <button class="carousel-btn" onclick="carouselPrev(this)">&#8592;</button>
-            <div class="carousel-dots"></div>
-            <button class="carousel-btn" onclick="carouselNext(this)">&#8594;</button>
+            <!-- Dots -->
+            <div style="position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:3">
+                <div id="miniDot0" style="width:8px;height:8px;border-radius:50%;background:var(--accent-cyan);transition:opacity 0.3s"></div>
+                <div id="miniDot1" style="width:8px;height:8px;border-radius:50%;background:var(--border-color);transition:opacity 0.3s"></div>
+                <div id="miniDot2" style="width:8px;height:8px;border-radius:50%;background:var(--border-color);transition:opacity 0.3s"></div>
+            </div>
         </div>
-        <div class="carousel-progress-bar"><div class="carousel-progress-fill"></div></div>
+
+        </div><!-- end 3-column grid -->
+
+        <!-- Mini Carousel JS -->
+        <script>
+        (function(){
+            let cur = 0, total = 3, paused = false, timer;
+            const inner = document.getElementById('miniCarouselInner');
+            const dots = [document.getElementById('miniDot0'), document.getElementById('miniDot1'), document.getElementById('miniDot2')];
+
+            function goTo(n) {
+                cur = (n + total) % total;
+                inner.style.transform = 'translateX(-' + (cur * 100) + '%)';
+                dots.forEach((d,i) => d.style.background = i === cur ? 'var(--accent-cyan)' : 'var(--border-color)');
+            }
+
+            function tick() {
+                if (!paused) goTo(cur + 1);
+                timer = setTimeout(tick, 5000);
+            }
+
+            window.miniCarouselNext = function() { goTo(cur + 1); };
+            window.miniCarouselPrev = function() { goTo(cur - 1); };
+            window.pauseMiniCarousel = function() { paused = true; };
+            window.resumeMiniCarousel = function() { paused = false; };
+
+            timer = setTimeout(tick, 5000);
+        })();
+        </script>
+
+        <div class="carousel-controls" style="margin-top:0.5rem">
+            <div class="carousel-dots"></div>
+        </div>
     </div>
 
 
