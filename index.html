@@ -439,8 +439,9 @@
                 <span class="skill-item">C++</span><span class="skill-item">C#</span><span class="skill-item">Python</span>
                 <span class="skill-item">OpenCV</span><span class="skill-item">MVTec Halcon</span><span class="skill-item">YOLO</span>
                 <span class="skill-item">PyTorch</span><span class="skill-item">Qt/HMI</span><span class="skill-item">TensorRT</span>
-                <span class="skill-item">Git/GitHub</span><span class="skill-item">Linux</span><span class="skill-item">NVIDIA Jetson</span>
-                <span class="skill-item">Raspberry Pi</span><span class="skill-item">Edge AI</span><span class="skill-item">Camera Integration</span>
+                <span class="skill-item">Segmentation</span><span class="skill-item">Git/GitHub</span><span class="skill-item">Linux</span>
+                <span class="skill-item">NVIDIA Jetson</span><span class="skill-item">Raspberry Pi</span><span class="skill-item">Edge AI</span>
+                <span class="skill-item">Camera Integration</span>
             </div>
             <h4 style="margin-top:1.25rem" data-i18n="about.algohead">Image Processing Algorithms</h4>
             <div class="algo-list">
@@ -572,8 +573,7 @@
                 <span class="skill-item">ARM-based Platforms</span><span class="skill-item">GPIO</span>
                 <span class="skill-item">MQTT</span><span class="skill-item">Edge Inference</span>
                 <span class="skill-item">Sensor Integration</span><span class="skill-item">Multi-Camera Integration</span>
-                <span class="skill-item">Hardware-Software Integration</span><span class="skill-item">ROS</span>
-                <span class="skill-item">Gazebo</span>
+                <span class="skill-item">Hardware-Software Integration</span>
             </div>
         </div>
         <div class="skills-category">
@@ -639,7 +639,8 @@
             <span class="group-badge badge-company" data-i18n="group.company.badge">🔒 Company IP — Not Shareable</span>
             <div class="group-line"></div>
         </div>
-        <div class="carousel-wrapper"><div class="carousel-track">
+        <!-- STATIC: First 2 cards always visible -->
+        <div class="projects-grid" style="margin-bottom:1.5rem">
 
             <div class="project-card fade-in" data-category="company">
                 <div class="project-image" style="background:linear-gradient(135deg,#1a1200 0%,#2e1a00 100%);height:200px">
@@ -693,6 +694,11 @@
                     </div>
                 </div>
             </div>
+
+        </div><!-- end static grid -->
+
+        <!-- CAROUSEL: 3rd card onwards — faster speed -->
+        <div class="carousel-wrapper"><div class="carousel-track" data-interval="4000">
 
             <div class="project-card locked fade-in" data-category="company">
                 <div class="project-image" style="background:linear-gradient(135deg,#1a1000 0%,#1a0a1a 100%)">
@@ -1189,6 +1195,11 @@ document.querySelectorAll('.nav-center a').forEach(link => {
 // Project filter tabs
 // ── PROJECT FILTER + CAROUSEL ────────────────────────────────
 const SLIDE_INTERVAL = 8000;
+
+function getInterval(groupEl) {
+  const track = groupEl.querySelector('.carousel-track');
+  return track && track.dataset.interval ? parseInt(track.dataset.interval) : SLIDE_INTERVAL;
+}
 const carousels = new Map(); // group element -> carousel state
 
 function initCarousel(groupEl) {
@@ -1312,7 +1323,7 @@ function startAutoPlay(groupEl) {
     state.fillPct = 0;
     const fill = groupEl.querySelector('.carousel-progress-fill');
     if (fill) fill.style.width = '0%';
-    const step = 100 / (SLIDE_INTERVAL / 80);
+    const interval = getInterval(groupEl); const step = 100 / (interval / 80);
     state.fillTimer = setInterval(() => {
         state.fillPct += step;
         if (fill) fill.style.width = Math.min(state.fillPct, 100) + '%';
@@ -1321,7 +1332,7 @@ function startAutoPlay(groupEl) {
     state.timer = setTimeout(() => {
         slideNext(groupEl);
         startAutoPlay(groupEl);
-    }, SLIDE_INTERVAL);
+    }, interval);
 }
 
 function resumeAutoPlay(groupEl) {
@@ -1332,7 +1343,7 @@ function resumeAutoPlay(groupEl) {
     clearTimeout(state.timer);
     const fill = groupEl.querySelector('.carousel-progress-fill');
     const remaining = SLIDE_INTERVAL * (1 - state.fillPct / 100);
-    const step = 100 / (SLIDE_INTERVAL / 80);
+    const interval = getInterval(groupEl); const step = 100 / (interval / 80);
     state.fillTimer = setInterval(() => {
         state.fillPct += step;
         if (fill) fill.style.width = Math.min(state.fillPct, 100) + '%';
